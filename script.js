@@ -2,7 +2,7 @@
 const bulb1 = document.querySelector('#lightbulb1')
 const bulb2 = document.querySelector('#lightbulb2')
 const bulb3 = document.querySelector('#lightbulb3')
-const lights = document.querySelectorAll('.items')
+const lights = document.querySelectorAll('.item')
 const h3 = document.querySelector('.subtitle')
 let count = 0
 
@@ -18,6 +18,9 @@ const handleClick = function(){
     this.classList.toggle('active')
 }
 
-bulb1.addEventListener('mouseenter', handleClick)
-bulb2.addEventListener('mouseenter', handleClick)
-bulb3.addEventListener('mouseenter', handleClick)
+// bulb1.addEventListener('mouseenter', handleClick)
+// bulb2.addEventListener('mouseenter', handleClick)
+// bulb3.addEventListener('mouseenter', handleClick)
+lights.forEach((light) => {
+    light.addEventListener('click', handleClick)
+})
